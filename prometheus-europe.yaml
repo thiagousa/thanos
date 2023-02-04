@@ -1,0 +1,19 @@
+nameOverride: "eu"
+namespaceOverride: "europe"
+nodeExporter:
+  enabled: true
+grafana:
+  enabled: true
+  replicas: 1
+alertmanager:
+  enabled: false
+kubeStateMetrics:
+  enabled: false
+prometheus:
+  prometheusSpec:
+    replicas: 2
+    replicaExternalLabelName: "replica"
+    prometheusExternalLabelName: "cluster"
+    thanos:
+      baseImage: quay.io/thanos/thanos
+      version: v0.24.0

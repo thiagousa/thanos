@@ -1,0 +1,17 @@
+nameOverride: "us"
+namespaceOverride: "united-states"
+nodeExporter:
+  enabled: false
+grafana:
+  enabled: false
+alertmanager:
+  enabled: false
+kubeStateMetrics:
+  enabled: false
+prometheus:
+  prometheusSpec:
+    replicaExternalLabelName: "replica"
+    prometheusExternalLabelName: "cluster"
+    thanos:
+      baseImage: quay.io/thanos/thanos
+      version: v0.24.0    

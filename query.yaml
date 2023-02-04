@@ -1,0 +1,20 @@
+---
+store:
+  enabled: false
+compact:
+  enabled: false
+bucket:
+  enabled: false
+rule:
+  enabled: false
+sidecar:
+  enabled: false
+queryFrontend:
+  enabled: false
+query:
+  enabled: true
+  replicaLabels:
+    - replica
+  stores:
+    - dnssrv+_grpc._tcp.prometheus-operated.europe.svc.cluster.local
+    - dnssrv+_grpc._tcp.prometheus-operated.united-states.svc.cluster.local
